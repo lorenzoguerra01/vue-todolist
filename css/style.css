@@ -44,7 +44,7 @@ a {
 
 .ms_screen {
     height: 100vh;
-    background-color: green;
+    background-color: gold;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,9 +68,11 @@ a {
     flex-wrap: wrap;
     cursor: crosshair;
 }
+
 .ms_pointer {
     cursor: pointer;
 }
+
 /* flex utility  */
 /* media query  */
 /* @media screen and (max-width: 1200px) {}   */
