@@ -1,15 +1,20 @@
-import {} from './utility.js';
-import {toDo} from './data.js';
+import { } from './utility.js';
+import { toDo } from './data.js';
 
-const {createApp} = Vue;
+const { createApp } = Vue;
 createApp({
-    data(){
-        return{
-            message : 'Hello world!!!'
+    data() {
+        return {
+            toDo,
         }
     },
-    methods :{
-
+    methods: {
+        toggleDone(id) {
+            const item = this.toDo.find((el) => {
+                return el.id === id;
+            });
+            item.done = !item.done;
+        },
     },
     mounted() {
 

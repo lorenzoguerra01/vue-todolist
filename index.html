@@ -26,13 +26,23 @@
     <!-- collegamento google font  -->
 
 </head>
-    <div id="app" class="ms_screen text-center">
-        <h1>Vue JS</h1>
-        <div class="card ms_card">
-            <h2>{{message}}</h2>
-        </div>
-    </div>
+
 <body>
+    <div id="app" class="ms_screen text-center">
+        <h1 class="text-white">TO DO LIST!!!</h1>
+        <div class="card ms_card">
+            <main class="container my-4 bg-light">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between " v-for="(item, index) in toDo" :key="item.id">
+                        <span :class="{ 'text-decoration-line-through': item.done}" @click="toggleDone(item.id)"
+                            class="pointer">
+                            {{item.text}}
+                        </span>
+                    </li>
+                </ul>
+            </main>
+        </div>
+    </div>    
 </body>
 
 </html>
